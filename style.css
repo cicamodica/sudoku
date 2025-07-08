@@ -30,6 +30,21 @@ header {
   background: #B4F04C;
 }
 
+.left-group {
+  /*Estilização do grupo de itens que fica á esquerda do header (ícone de menu e logo)*/
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-button {
+  /*Estilização do ícone de menu ☰*/
+  font-size: 35px;
+  cursor: pointer;
+  margin-right: 15px;
+  color: #884CF0;
+}
+
 .logo p {
     font-size: 40px;
     color: #884CF0;
@@ -54,6 +69,30 @@ header {
     -2px  2px 0 #8ebd3e,
      2px  2px 0 #8ebd3e;
 }
+
+ .main-title select, .main-title button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .main-title select {
+        background-color: white;
+        color: #884CF0;
+      }
+
+      .main-title button {
+        background-color: #B4F04C;
+        color: #884CF0;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .main-title button:hover {
+        background-color: #a3dd3e;
+      }
 
 /*@keyframes pulsar {
   0%, 100% {
