@@ -1,28 +1,135 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jogo Sudoku</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header class="logo">
-            <p>sudoku</p>
-        </header>
-        <main>
-            <div class="main-title">
-                <!--<div class="stars-left">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo Sudoku</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="logo">
+      <p>sudoku</p>
+    </header>
+    <main>
+      <div class="main-title">
+        <!--<div class="stars-left">
                  <img src="images/estrela1.png" alt="star" class="star1" />
                  <img src="images/estrela2.png" alt="star" class="star2" />
                 </div>-->
-                <p>Bem-vindo ao jogo Sudoku</p>
-                <!--<div class="stars-right">
+        <p>Bem-vindo ao jogo sudoku</p>
+        <!--<div class="stars-right">
                  <img src="images/estrela3.png" alt="star" class="star3" />
                  <img src="images/estrela4.png" alt="star" class="star4" />
                 </div>-->
-            </div>    
-        </main>
-        <script src="script.js"></script>
-    </body>
+      </div>
+      <section class="sudoku-board">
+        <table>
+          <tbody>
+            <!-- 9 linhas -->
+            <!-- Cada linha tem 9 colunas -->
+            <tr>
+              <td>5</td>
+              <td>3</td>
+              <td></td>
+              <td></td>
+              <td>7</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>9</td>
+              <td>5</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>9</td>
+              <td>8</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>6</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>6</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td></td>
+              <td></td>
+              <td>8</td>
+              <td></td>
+              <td>3</td>
+              <td></td>
+              <td></td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>2</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>6</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>2</td>
+              <td>8</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>4</td>
+              <td>1</td>
+              <td>9</td>
+              <td></td>
+              <td></td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>8</td>
+              <td></td>
+              <td></td>
+              <td>7</td>
+              <td>9</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>

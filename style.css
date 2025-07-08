@@ -92,3 +92,39 @@ header {
   margin-bottom: 30px;
 }
 */
+
+.sudoku-board {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.sudoku-board table {
+  border-collapse: collapse;
+}
+
+.sudoku-board td {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 35px;
+  font-family: "Connection", sans-serif;
+  border: 3px solid #8ebd3e;
+  color: #B4F04C
+}
+
+/* Linhas mais grossas para separar os blocos 3x3 */
+.sudoku-board tr:nth-child(3n) td {
+  border-bottom: 6px solid #485c27;
+}
+.sudoku-board td:nth-child(3n) {
+  border-right: 6px solid #485c27;
+}
+
+.sudoku-board tr:first-child td {
+  border-top: 6px solid #485c27;
+}
+.sudoku-board td:first-child {
+  border-left: 6px solid #485c27;
+}
