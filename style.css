@@ -1,1 +1,21 @@
+@font-face{
+    font-family: "Connection";
+    src: url("fonts\connection-font\Connection-arMJ.otf") format("opentype");
+    font-weight: 300;
+}
 
+@font-face{
+    font-family: "Connection";
+    src: url("fonts\connection-font\ConnectionBold-ER1g.otf") format("opentype");
+    font-weight: 500;
+}
+
+body {
+    background-color: blueviolet;
+    font-family: "Connection", sans-serif;
+}
+
+header p {
+    display: flex;
+    justify-content: center;
+}
