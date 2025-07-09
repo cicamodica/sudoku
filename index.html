@@ -12,27 +12,32 @@
           <p>sudoku</p>
         </div>
     </header>
+
     <main>
       <div class="main-title">
-        <!--<div class="stars-left">
-                 <img src="images/estrela1.png" alt="star" class="star1" />
-                 <img src="images/estrela2.png" alt="star" class="star2" />
-                </div>-->
         <p>Bem-vindo ao jogo sudoku</p>
-        <!--<div class="stars-right">
-                 <img src="images/estrela3.png" alt="star" class="star3" />
-                 <img src="images/estrela4.png" alt="star" class="star4" />
-                </div>-->
-        <label for="dificuldade" style="color: white; font-size: 20px;">Escolha a dificuldade:</label><br>
-        <select id="dificuldade">
-          <option value="facil">Fácil</option>
-          <option value="medio">Médio</option>
-          <option value="dificil">Difícil</option>
-        </select>
-        <br>
-        <button id="btn-jogar">Jogar</button>
+      </div>
+      <div class="selecao">
+        <p class="dificuldade-title">Escolha a dificuldade:</p>
+        <div class="botoes-dificuldade">
+          <button class="botao-dificuldade" data-dificuldade="facil">Facil</button>
+          <button class="botao-dificuldade" data-dificuldade="medio">Medio</button>
+          <button class="botao-dificuldade" data-dificuldade="dificil">Dificil</button>
+        </div>
+        <p id="descricao-dificuldade" class="descricao"></p>
+        <div class="btn-jogar">
+          <button id="btn-jogar" disabled>Jogar</button>
+        </div>
+      </div>
+      <div class="decoracao">
+        <img src="images/fundoDecoracaoRoxa.png" alt="img" />
       </div>
     </main>
+
+    <footer>
+      <p><span class="simbolo">&copy;</span> 2025 sudoku. Todos os direitos reservados.</p>
+    </footer>
+    
     <script src="script.js"></script>
 
   </body>
