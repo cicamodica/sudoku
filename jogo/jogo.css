@@ -59,9 +59,9 @@ header {
 }
 
 .main-title p {
-  font-size: 100px;
+  font-size: 80px;
   color: #B4F04C;
-  margin-top: 60px;
+  margin-top: 40px;
 
   text-shadow:
     -2px -2px 0 #8ebd3e,
@@ -94,48 +94,10 @@ header {
         background-color: #a3dd3e;
       }
 
-/*@keyframes pulsar {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.5);
-    opacity: 0.8;
-  }}
-
-.stars-left,
-.stars-right {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.stars-left img,
-.stars-right img {
-  width: 50px;
-  height: auto;
-  animation: pulsar 2s infinite ease-in-out;
-}
-
-.star1 {
-  margin-bottom: 60px;
-}
-.star2 {
-  margin-bottom: 30px;
-}
-.star3 {
-  margin-bottom: 60px;
-}
-.star4 {
-  margin-bottom: 30px;
-}
-*/
-
 .sudoku-board {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .sudoku-board table {
@@ -166,4 +128,132 @@ header {
 }
 .sudoku-board td:first-child {
   border-left: 6px solid #485c27;
+}
+
+
+footer {
+    position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #B4F04C;
+  color: #884CF0;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  z-index: 10;
+  line-height: 1.5; /* importante para evitar sobreposição */
+}
+
+.simbolo {
+  font-family: Arial, sans-serif; /* ou outra fonte confiável */
+  font-size: 16px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.timer-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.timer {
+ font-size: 40px;
+  color: #B4F04C;
+  font-weight: bold;
+  text-shadow: 1px 1px #485c27;
+}
+
+#btn-pausa {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #B4F04C;
+  color: #884CF0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Connection";
+}
+
+#btn-pausa:hover {
+  background-color: #a3dd3e;
+}
+
+#teclado {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 10px;
+  justify-content: center;
+}
+
+#teclado button {
+  font-size: 25px;
+  padding: 15px;
+  background-color: #B4F04C;
+  color: #884CF0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-family: "Connection";
+}
+
+#teclado .botao-apagar {
+  grid-column: span 3;
+  text-align: center;
+}
+
+#teclado .botao-refazer {
+  grid-column: span 3;
+  text-align: center;
+}
+
+#teclado button:hover {
+  background-color: #a3dd3e;
+}
+
+.botoes-controle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.botoes-controle button {
+  font-size: 16px;
+  padding: 10px;
+  background-color: #B4F04C;
+  color: #884CF0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-family: "Connection";
+}
+
+.botoes-controle button:hover {
+  background-color: #a3dd3e;
+}
+
+.campo-jogo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.elementos-direita {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
 }

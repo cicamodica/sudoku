@@ -3,6 +3,12 @@ const descricao = document.getElementById("descricao-dificuldade");
 const btnJogar = document.getElementById("btn-jogar");
 let dificuldadeSelecionada = null;
 
+ function iniciarJogo() {
+    const dificuldade = document.getElementById('dificuldade').value;
+    localStorage.setItem('dificuldadeSelecionada', dificuldade);
+    window.location.href = 'jogo.html';
+  }
+
 const descricoes = {
   facil: "Modo Fácil: mais números revelados, ideal para iniciantes.",
   medio: "Modo Médio: desafio equilibrado, para quem já conhece as regras.",
