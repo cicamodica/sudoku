@@ -170,15 +170,20 @@ footer {
   font-size: 16px;
   background-color: #B4F04C;
   color: #884CF0;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   font-family: "Connection";
+  box-shadow: 
+  0 0 0 2px #485c27,      
+  4px 4px 0 0 #485c27;    
+  transition: transform 0.1s ease;
 }
 
 #btn-pausa:hover {
-  background-color: #a3dd3e;
+  transform: translate(-1px, -1px);
+  box-shadow: 
+    0 0 0 2px #485c27,
+    5px 5px 0 0 #485c27;
 }
 
 #teclado {
@@ -193,27 +198,50 @@ footer {
   padding: 15px;
   background-color: #B4F04C;
   color: #884CF0;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s;
   font-family: "Connection";
+  box-shadow: 
+  0 0 0 2px #485c27,      
+  4px 4px 0 0 #485c27;    
+  transition: transform 0.1s ease;
+}
+
+#btn-pausa:hover {
+  background-color: #a3dd3e;
+  transform: translate(-1px, -1px);
+  box-shadow: 
+    0 0 0 2px #485c27,
+    5px 5px 0 0 #485c27;
 }
 
 #teclado .botao-apagar {
   grid-column: span 3;
   text-align: center;
+  box-shadow: 
+  0 0 0 2px #485c27,      
+  4px 4px 0 0 #485c27;    
+  transition: transform 0.1s ease;
 }
 
 #teclado .botao-refazer {
   grid-column: span 3;
   text-align: center;
+  box-shadow: 
+    0 0 0 2px #485c27,
+    4px 4px 0 0 #485c27;
+    transition: transform 0.1s ease;
 }
 
 #teclado button:hover {
   background-color: #a3dd3e;
+  transform: translate(-1px, -1px);
+  box-shadow: 
+    0 0 0 2px #485c27,
+    5px 5px 0 0 #485c27;
 }
+
 
 .botoes-controle {
   display: flex;
@@ -229,16 +257,21 @@ footer {
   padding: 10px;
   background-color: #B4F04C;
   color: #884CF0;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s;
   font-family: "Connection";
+  box-shadow: 
+  0 0 0 2px #485c27,      
+  4px 4px 0 0 #485c27;    
+  transition: transform 0.1s ease;
 }
 
 .botoes-controle button:hover {
   background-color: #a3dd3e;
+  transform: translate(-1px, -1px);
+  box-shadow: 
+    0 0 0 2px #485c27,
+    5px 5px 0 0 #485c27;
 }
 
 .campo-jogo {
