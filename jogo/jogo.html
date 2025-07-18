@@ -14,7 +14,7 @@
     </header>
     <main>
       <div class="main-title">
-        <p>Bom jogo!</p>
+        <p id="titulo-jogo">Bom jogo!</p>
       </div>
 
       <div class="campo-jogo">
@@ -147,7 +147,14 @@
           </div>
           <div class="botoes-controle">
             <button onclick="novoJogo()">Novo Jogo</button>
-            <button onclick="selecionarDificuldade()">Mudar Dificuldade</button>
+            <div class="seletor-dificuldade">
+              <label for="dificuldade-select">Mudar Dificuldade</label>
+              <select id="dificuldade-select">
+                <option value="facil">Facil</option>
+                <option value="medio">Medio</option>
+                <option value="dificil">Dificil</option>
+              </select>
+            </div>
           </div>
         </div>
       </div> 

@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Connection";
-  src: url("fonts\connection-font\Connection-arMJ.otf") format("opentype");
+  src: url("fonts/connection-font/Connection-arMJ.otf") format("opentype");
   font-weight: 300;
 }
 
 @font-face {
   font-family: "Connection";
-  src: url("fonts\connection-font\ConnectionBold-ER1g.otf") format("opentype");
+  src: url("fonts/connection-font/ConnectionBold-ER1g.otf") format("opentype");
   font-weight: 500;
 }
 
@@ -49,7 +49,7 @@ header {
 .logo p {
   font-size: 40px;
   color: #884cf0;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .main-title {
@@ -66,6 +66,7 @@ header {
 
   text-shadow: -2px -2px 0 #8ebd3e, 2px -2px 0 #8ebd3e, -2px 2px 0 #8ebd3e,
     2px 2px 0 #8ebd3e;
+    font-weight: 300;
 }
 
 .selecao {
@@ -88,7 +89,7 @@ header {
   background-color: #b4f04c;
   color: #884cf0;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 35px;
 }
 
@@ -120,7 +121,7 @@ header {
   border-radius: 0;
   font-family: "Connection", monospace;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 500;
   position: relative;
   box-shadow: 
     0 0 0 2px #5c30a8,      
@@ -156,6 +157,7 @@ header {
   justify-content: center;
   text-align: center;
   margin-top: 20px;
+  font-weight: 300;
 }
 
 #btn-jogar {
@@ -169,7 +171,7 @@ header {
   background-color: #884cf0;
   color: white;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 35px;
   box-shadow:
     0 0 0 3px white,   /* borda interna branca */
@@ -215,7 +217,7 @@ footer {
   color: #884CF0;
   text-align: center;
   padding: 10px;
-  font-weight: bold;
+  font-weight: 500;
   z-index: 10;
   line-height: 1.5; /* importante para evitar sobreposição */
 }

@@ -1,12 +1,12 @@
 @font-face{
     font-family: "Connection";
-    src: url("fonts\connection-font\Connection-arMJ.otf") format("opentype");
+    src: url("fonts/connection-font/Connection-arMJ.otf") format("opentype");
     font-weight: 300;
 }
 
 @font-face{
     font-family: "Connection";
-    src: url("fonts\connection-font\ConnectionBold-ER1g.otf") format("opentype");
+    src: url("fonts/connection-font/ConnectionBold-ER1g.otf") format("opentype");
     font-weight: 500;
 }
 
@@ -249,11 +249,11 @@ footer {
   gap: 10px;
   width: 200px;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .botoes-controle button {
-  font-size: 16px;
+  font-size: 25px;
   padding: 10px;
   background-color: #B4F04C;
   color: #884CF0;
@@ -274,6 +274,43 @@ footer {
     5px 5px 0 0 #485c27;
 }
 
+.seletor-dificuldade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  font-family: "Connection", sans-serif;
+  color: white;
+  font-size: 30px;
+}
+
+.seletor-dificuldade label {
+  font-family: "Connection";
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #B4F04C;
+  text-shadow: 1px 1px #485c27;
+}
+
+#dificuldade-select {
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: #B4F04C;
+  color: #884CF0;
+  border: 2px solid #5c30a8;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Connection";
+    transform: translate(-1px, -1px);
+  box-shadow: 
+    0 0 0 2px #485c27,
+    5px 5px 0 0 #485c27;
+}
+
+#dificuldade-select:hover {
+  background-color: #a1d645;
+}
+
 .campo-jogo {
   display: flex;
   justify-content: center;
@@ -289,4 +326,14 @@ footer {
   gap: 20px;
   align-items: center;
   margin-top: 20px;
+}
+
+/* Célula selecionada */
+.celula-selecionada {
+  background-color: #f4b942; /* cor amarela como na imagem */
+}
+
+/* Linha, coluna e bloco da célula selecionada */
+.destacado {
+  background-color: #6931ca; /* cor azul clara como na imagem */
 }
