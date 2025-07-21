@@ -38,14 +38,6 @@ header {
   gap: 10px;
 }
 
-.menu-button {
-  /*Estilização do ícone de menu ☰*/
-  font-size: 35px;
-  cursor: pointer;
-  margin-right: 15px;
-  color: #884cf0;
-}
-
 .logo p {
   font-size: 40px;
   color: #884cf0;
@@ -65,6 +57,20 @@ header {
   margin-top: 200px;
   text-shadow: 2px 2px #485c27;
   font-weight: 500;
+}
+
+.decoracao {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0; /* atrás dos elementos principais */
+  top: 320px;
+  color: #5c30a8;
+}
+
+.decoracao img {
+  width: 600px; /* ajuste conforme necessário */
+  height: auto;
 }
 
 .selecao {
@@ -145,6 +151,13 @@ header {
   color: #884CF0;
 }
 
+.selecao,
+.botoes-dificuldade,
+#btn-jogar {
+  position: relative; /* necessário para o z-index funcionar */
+  z-index: 1;
+}
+
 #descricao-dificuldade {
  font-size: 18px;
   color: white;
@@ -195,20 +208,6 @@ header {
     4px 4px 0 0 #5c30a8;
 }
 
-.decoracao {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 0; /* atrás dos elementos principais */
-  top: 320px;
-  color: #5c30a8;
-}
-
-.decoracao img {
-  width: 600px; /* ajuste conforme necessário */
-  height: auto;
-}
-
 footer {
     position: fixed;
   bottom: 0;
@@ -227,6 +226,192 @@ footer {
   font-size: 16px;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+/* === RESPONSIVIDADE GERAL === */
+
+/*Menor que 1669px*/
+@media (max-width: 1669px) {
+  .main-title p {
+    font-size: 100px; /* menor título */
+    margin-top: 30px;
+    text-align: center;
+    padding: 40px;
+  }
+
+ .dificuldade-title {
+    font-size: 45px;
+    margin-top: 100px;
+  }
+
+  .selecao button,
+  #btn-jogar {
+    font-size: 28px;
+    margin-top: 0;
+  }
+  }
+
+  /*Menor que 1370px*/
+@media (max-width: 1370px) {
+  .main-title p {
+    font-size: 100px; /* menor título */
+    margin-top: 30px;
+    text-align: center;
+    padding: 40px;
+  }
+
+ .dificuldade-title {
+    font-size: 45px;
+    margin-top: -80px;
+  }
+
+  .selecao button,
+  #btn-jogar {
+    font-size: 28px;
+    margin-top: 0;
+  }
+
+  #descricao-dificuldade {
+    font-size: 16px;
+    max-width: 90%;
+    margin-top: -10px;
+    margin-bottom: 30px;
+
+  }
+
+}
+
+/* Tablets (máx. 1024px) */
+@media (max-width: 1024px) {
+  .main-title p {
+    font-size: 100px; /* menor título */
+    margin-top: 30px;
+  }
+
+  .dificuldade-title {
+    font-size: 45px;
+    margin-top: 0px;
+  }
+
+  .selecao button,
+  #btn-jogar {
+    font-size: 28px;
+    padding: 8px 15px;
+  }
+
+  .decoracao img {
+    display: none;
+  }
+
+    #descricao-dificuldade {
+    font-size: 16px;
+    max-width: 90%;
+    margin-top: -10px;
+
+  }
+}
+
+/* Celulares (máx. 768px) */
+@media (max-width: 768px) {
+  header {
+    height: 60px;
+    padding: 0 10px;
+  }
+
+  .logo p {
+    font-size: 28px;
+  }
+
+  .main-title p {
+    font-size: 70px;
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  .dificuldade-title {
+    font-size: 35px;
+    margin-top: -30px;
+  }
+
+  .botoes-dificuldade {
+    gap: 10px;
+  }
+
+  .botao-dificuldade {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  #descricao-dificuldade {
+    font-size: 16px;
+    max-width: 90%;
+  }
+
+  #btn-jogar {
+    font-size: 28px;
+    padding: 8px 12px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Celulares pequenos (máx. 560px) */
+@media (max-width: 560px) {
+  .main-title p {
+    font-size: 60px;
+    margin-top: 50px;
+  }
+
+  .dificuldade-title {
+    font-size: 28px;
+  }
+
+  .selecao button,
+  #btn-jogar {
+    font-size: 22px;
+    padding: 6px 10px;
+  }
+
+    #descricao-dificuldade {
+    font-size: 16px;
+    max-width: 90%;
+    margin-bottom: 50px;
+  }
+
+}
+
+/*Entre 490px e 481px*/
+
+@media (min-width: 481px) and (max-width: 490px) {
+  .main-title p {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+}
+
+/* Celulares pequenos (máx. 480px) */
+@media (max-width: 480px) {
+  .main-title p {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+
+  .dificuldade-title {
+    font-size: 28px;
+  }
+
+  .selecao button,
+  #btn-jogar {
+    font-size: 22px;
+    padding: 6px 10px;
+  }
+
+  .decoracao img {
+    width: 200px;
+  }
 }
 
 
