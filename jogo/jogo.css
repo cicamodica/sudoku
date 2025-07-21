@@ -162,7 +162,6 @@ footer {
 .timer {
   font-size: 40px;
   color: white;
-  font-weight: bold;
   text-shadow: 2px 2px #485c27;
   font-weight: 500;
 }
@@ -351,3 +350,125 @@ td.fixo {
   font-weight: 500;
 }
 
+/* = RESPONSIVIDADE GERAL = */
+
+/*Layout para telas menores ou iguais a 1024px */
+@media (max-width: 1024px) {
+  body {
+    overflow-y: auto; /* permite rolagem */
+  }
+
+  .campo-jogo {
+    flex-direction: column;       /* empilha os elementos */
+    align-items: center;
+    gap: 20px;
+    transform: scale(1);          /* remove o scale do desktop */
+    margin-bottom: 100px;         /* dá respiro antes do footer */
+  }
+
+  .main-title {
+    display: none;
+  }
+
+  .timer-container {
+    position: absolute;
+    top: 0px;
+    right: 60px;
+    justify-content: flex-end;
+    z-index: 20;
+    flex-direction: column;
+  }
+
+  .timer {
+    font-size: 30px;
+  }
+
+  .sudoku-board {
+    order: 2;
+    margin-top: 10px;
+  }
+
+  .sudoku-board td {
+    width: 55px;
+    height: 55px;
+    font-size: 28px;
+  }
+
+   .botoes-controle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row; /* 🔥 deixa tudo lado a lado */
+  }
+
+  .botoes-controle > * {
+    flex-shrink: 0; /* evita que os itens encolham e quebrem de linha */
+  }
+
+   .botoes-controle button {
+    font-size: 20px;
+    padding: 8px 15px;
+    background-color: #b4f04c;
+    color: #884cf0;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Connection";
+    border: none;
+    box-shadow: 0 0 0 2px #485c27, 4px 4px 0 0 #485c27;
+    transition: transform 0.1s ease;
+    margin: 0;
+  }
+
+  .botoes-controle button:hover {
+    background-color: white;
+    transform: translate(-1px, -1px);
+    box-shadow: 0 0 0 2px #485c27, 5px 5px 0 0 #485c27;
+  }
+
+   .seletor-dificuldade {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: auto;
+    margin: 0;
+  }
+
+  .seletor-dificuldade label {
+    margin: 0; /* 🔥 evita quebrar linha */
+  }
+
+  #teclado, .botoes-controle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  #teclado button {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+}
+
+/* 🔹 Celulares pequenos */
+@media (max-width: 600px) {
+  .sudoku-board td {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  #teclado {
+    grid-template-columns: repeat(3, 50px); /* volta para grade de 3 colunas */
+    gap: 6px;
+  }
+
+  .main-title p {
+    font-size: 40px;
+  }
+}
