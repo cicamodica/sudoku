@@ -1,13 +1,14 @@
-@font-face{
-    font-family: "Connection";
-    src: url("../fonts/connection-font/Connection-arMJ.otf") format("opentype");
-    font-weight: 300;
+@font-face {
+  font-family: "Connection";
+  src: url("../fonts/connection-font/Connection-arMJ.otf") format("opentype");
+  font-weight: 300;
 }
 
-@font-face{
-    font-family: "Connection";
-    src: url("../fonts/connection-font/ConnectionBold-ER1g.otf") format("opentype");
-    font-weight: 500;
+@font-face {
+  font-family: "Connection";
+  src: url("../fonts/connection-font/ConnectionBold-ER1g.otf")
+    format("opentype");
+  font-weight: 500;
 }
 
 * {
@@ -17,8 +18,9 @@
 }
 
 body {
-    background-color: #884CF0;
-    font-family: "Connection", sans-serif;
+  background-color: #884cf0;
+  font-family: "Connection", sans-serif;
+  overflow: hidden; /* ✅ Impede rolagem */
 }
 
 header {
@@ -27,7 +29,7 @@ header {
   justify-content: space-between;
   height: 80px;
   padding: 0 20px;
-  background: #B4F04C;
+  background: #b4f04c;
 }
 
 .left-group {
@@ -42,13 +44,13 @@ header {
   font-size: 35px;
   cursor: pointer;
   margin-right: 15px;
-  color: #884CF0;
+  color: #884cf0;
 }
 
 .logo p {
-    font-size: 40px;
-    color: #884CF0;
-    font-weight: bold;
+  font-size: 40px;
+  color: #884cf0;
+  font-weight: 500;
 }
 
 .main-title {
@@ -56,43 +58,40 @@ header {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  font-weight: bold;
 }
 
 .main-title p {
   font-size: 80px;
-  color: #B4F04C;
+  color: #b4f04c;
   margin-top: 40px;
-
-  text-shadow:
-    -2px -2px 0 #8ebd3e,
-     2px -2px 0 #8ebd3e,
-    -2px  2px 0 #8ebd3e,
-     2px  2px 0 #8ebd3e;
+  text-shadow: 2px 2px #485c27;
 }
 
- .main-title select, .main-title button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        font-size: 18px;
-        border-radius: 5px;
-        border: none;
-      }
+.main-title select,
+.main-title button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+}
 
-      .main-title select {
-        background-color: white;
-        color: #884CF0;
-      }
+.main-title select {
+  background-color: white;
+  color: #884cf0;
+}
 
-      .main-title button {
-        background-color: #B4F04C;
-        color: #884CF0;
-        cursor: pointer;
-        font-weight: bold;
-      }
+.main-title button {
+  background-color: #b4f04c;
+  color: #884cf0;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-      .main-title button:hover {
-        background-color: #a3dd3e;
-      }
+.main-title button:hover {
+  background-color: #a3dd3e;
+}
 
 .sudoku-board {
   display: flex;
@@ -102,6 +101,9 @@ header {
 
 .sudoku-board table {
   border-collapse: collapse;
+  box-shadow:
+  0 0 0 1px #485c27, 
+  6px 6px 0 0 #5c30a8;
 }
 
 .sudoku-board td {
@@ -112,7 +114,7 @@ header {
   font-size: 35px;
   font-family: "Connection", sans-serif;
   border: 3px solid #8ebd3e;
-  color: #B4F04C
+  color: #b4f04c;
 }
 
 /* Linhas mais grossas para separar os blocos 3x3 */
@@ -130,16 +132,15 @@ header {
   border-left: 6px solid #485c27;
 }
 
-
 footer {
-    position: fixed;
+  position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #B4F04C;
-  color: #884CF0;
+  background-color: #b4f04c;
+  color: #884cf0;
   text-align: center;
   padding: 10px;
-  font-weight: bold;
+  font-weight: 500;
   z-index: 10;
   line-height: 1.5; /* importante para evitar sobreposição */
 }
@@ -159,31 +160,35 @@ footer {
 }
 
 .timer {
- font-size: 40px;
-  color: #B4F04C;
+  font-size: 40px;
+  color: white;
   font-weight: bold;
-  text-shadow: 1px 1px #485c27;
+  text-shadow: 2px 2px #485c27;
+  font-weight: 500;
 }
 
 #btn-pausa {
   padding: 10px 15px;
-  font-size: 16px;
-  background-color: #B4F04C;
-  color: #884CF0;
+  font-size: 20px;
+  background-color: #884cf0;
+  color: white;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 300;
   font-family: "Connection";
-  box-shadow: 
-  0 0 0 2px #485c27,      
-  4px 4px 0 0 #485c27;    
+  border-color: white;
+  box-shadow:
+    3px 3px 0 0 white; /* pixel offset */
   transition: transform 0.1s ease;
+  text-shadow: 1px 1px #5c30a8;
 }
 
 #btn-pausa:hover {
+  background-color: white !important;
+  color: #884cf0;
   transform: translate(-1px, -1px);
-  box-shadow: 
-    0 0 0 2px #485c27,
-    5px 5px 0 0 #485c27;
+  box-shadow:
+    0 0 0 3px #5c30a8, 
+    5px 5px 0 0 #5c30a8 !important;
 }
 
 #teclado {
@@ -196,52 +201,42 @@ footer {
 #teclado button {
   font-size: 25px;
   padding: 15px;
-  background-color: #B4F04C;
-  color: #884CF0;
+  background-color: #b4f04c;
+  color: #884cf0;
   cursor: pointer;
-  font-weight: bold;
+  border-color: #b4f04c;
+  font-weight: 500;
   transition: background-color 0.3s;
   font-family: "Connection";
-  box-shadow: 
-  0 0 0 2px #485c27,      
-  4px 4px 0 0 #485c27;    
+  box-shadow: 0 0 0 2px #485c27, 4px 4px 0 0 #485c27;
   transition: transform 0.1s ease;
 }
 
 #btn-pausa:hover {
   background-color: #a3dd3e;
   transform: translate(-1px, -1px);
-  box-shadow: 
-    0 0 0 2px #485c27,
-    5px 5px 0 0 #485c27;
+  box-shadow: 0 0 0 2px #485c27, 5px 5px 0 0 #485c27;
 }
 
 #teclado .botao-apagar {
   grid-column: span 3;
   text-align: center;
-  box-shadow: 
-  0 0 0 2px #485c27,      
-  4px 4px 0 0 #485c27;    
+  box-shadow: 0 0 0 2px #485c27, 4px 4px 0 0 #485c27;
   transition: transform 0.1s ease;
 }
 
 #teclado .botao-refazer {
   grid-column: span 3;
   text-align: center;
-  box-shadow: 
-    0 0 0 2px #485c27,
-    4px 4px 0 0 #485c27;
-    transition: transform 0.1s ease;
+  box-shadow: 0 0 0 2px #485c27, 4px 4px 0 0 #485c27;
+  transition: transform 0.1s ease;
 }
 
 #teclado button:hover {
-  background-color: #a3dd3e;
+  background-color: white;
   transform: translate(-1px, -1px);
-  box-shadow: 
-    0 0 0 2px #485c27,
-    5px 5px 0 0 #485c27;
+  box-shadow: 0 0 0 2px #485c27, 5px 5px 0 0 #485c27;
 }
-
 
 .botoes-controle {
   display: flex;
@@ -255,23 +250,20 @@ footer {
 .botoes-controle button {
   font-size: 25px;
   padding: 10px;
-  background-color: #B4F04C;
-  color: #884CF0;
+  background-color: #b4f04c;
+  color: #884cf0;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 500;
   font-family: "Connection";
-  box-shadow: 
-  0 0 0 2px #485c27,      
-  4px 4px 0 0 #485c27;    
+  border-color: #b4f04c;
+  box-shadow: 0 0 0 2px #485c27, 4px 4px 0 0 #485c27;
   transition: transform 0.1s ease;
 }
 
 .botoes-controle button:hover {
-  background-color: #a3dd3e;
+  background-color: white;
   transform: translate(-1px, -1px);
-  box-shadow: 
-    0 0 0 2px #485c27,
-    5px 5px 0 0 #485c27;
+  box-shadow: 0 0 0 2px #485c27, 5px 5px 0 0 #485c27;
 }
 
 .seletor-dificuldade {
@@ -280,31 +272,30 @@ footer {
   align-items: center;
   margin-top: 15px;
   font-family: "Connection", sans-serif;
-  color: white;
   font-size: 30px;
+  font-weight: 500;
 }
 
 .seletor-dificuldade label {
   font-family: "Connection";
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 5px;
-  color: #B4F04C;
-  text-shadow: 1px 1px #485c27;
+  color: white;
+  text-shadow: 2px 2px #485c27;
 }
 
 #dificuldade-select {
   padding: 8px 12px;
   font-size: 16px;
-  background-color: #B4F04C;
-  color: #884CF0;
+  background-color: #b4f04c;
+  color: #884cf0;
   border: 2px solid #5c30a8;
   cursor: pointer;
-  font-weight: bold;
+  border-color: #b4f04c;
+  font-weight: 500;
   font-family: "Connection";
-    transform: translate(-1px, -1px);
-  box-shadow: 
-    0 0 0 2px #485c27,
-    5px 5px 0 0 #485c27;
+  transform: translate(-1px, -1px);
+  box-shadow: 0 0 0 2px #485c27, 5px 5px 0 0 #485c27;
 }
 
 #dificuldade-select:hover {
@@ -316,8 +307,11 @@ footer {
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-  margin-top: 40px;
+  margin-top: 20px;
   flex-wrap: wrap;
+  transform: scale(0.9); /* Reduz todo o bloco em 90% */
+  transform-origin: top center; /*  Mantém o topo fixo */
+  margin-bottom: 40px; /* Dá o respiro antes do footer */
 }
 
 .elementos-direita {
@@ -338,7 +332,22 @@ footer {
   background-color: #6931ca; /* cor azul clara como na imagem */
 }
 
+td.fixo {
+  color: white;
+  font-weight: 500;
+}
+
 .erro {
   color: red !important;
   font-weight: 300;
 }
+
+.celula {
+  color: #B4F04C; /* cor padrão dos números inseridos pelo usuário */
+}
+
+.usuario {
+  color: #B4F04C; /* cor já usada para os números do usuário */
+  font-weight: 500;
+}
+

@@ -212,9 +212,11 @@ function inserirNumero(valor) {
 
     if (valor === "") {
       refazerStack.push(estadoAtual);
+      celulaSelecionada.classList.remove("usuario");
     } else {
       salvarEstado();
       refazerStack = [];
+      celulaSelecionada.classList.add("usuario");
     }
 
     celulaSelecionada.textContent = valor;
@@ -226,25 +228,43 @@ function validarTabuleiro() {
   const tds = document.querySelectorAll("td");
   tds.forEach(td => td.classList.remove("erro")); // limpa erros anteriores
 
+  let completo = true;
+
   const matriz = Array.from({ length: 9 }, (_, i) =>
     Array.from({ length: 9 }, (_, j) => {
       const td = document.querySelector(`td[data-row="${i}"][data-col="${j}"]`);
+      if (td.textContent === "") completo = false; // se existir célula vazia, ainda não acabou
       return td.textContent;
     })
   );
+
+  let erroEncontrado = false;
 
   for (let row = 0; row < 9; row++) {
     for (let col = 0; col < 9; col++) {
       const valor = matriz[row][col];
       if (valor === "") continue;
 
-      // Verifica duplicatas na linha, coluna e bloco 3x3
       if (temDuplicata(matriz, row, col, valor)) {
         const td = document.querySelector(`td[data-row="${row}"][data-col="${col}"]`);
         td.classList.add("erro");
+        erroEncontrado = true;
       }
     }
   }
+
+  // ✅ Se está completo e sem erros, mostrar mensagem de parabéns e parar timer
+  if (completo && !erroEncontrado) {
+    exibirMensagemVitoria();
+    clearInterval(timerInterval); // ✅ pausa o timer
+  }
+}
+
+function exibirMensagemVitoria() {
+  const titulo = document.getElementById("titulo-jogo");
+  titulo.textContent = "🎉✨ Parabens, voce venceu! ✨🎉";
+  titulo.style.color = "#FFD700";
+  titulo.style.textShadow = "2px 2px #485c27";
 }
 
 function temDuplicata(matriz, row, col, valor) {

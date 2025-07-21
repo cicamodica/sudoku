@@ -63,10 +63,8 @@ header {
   font-size: 100px;
   color: #b4f04c;
   margin-top: 200px;
-
-  text-shadow: -2px -2px 0 #8ebd3e, 2px -2px 0 #8ebd3e, -2px 2px 0 #8ebd3e,
-    2px 2px 0 #8ebd3e;
-    font-weight: 300;
+  text-shadow: 2px 2px #485c27;
+  font-weight: 500;
 }
 
 .selecao {
@@ -88,6 +86,7 @@ header {
   font-family: "Connection";
   background-color: #b4f04c;
   color: #884cf0;
+  text-shadow: 1px 1px #485c27;
   cursor: pointer;
   font-weight: 500;
   font-size: 35px;
@@ -102,8 +101,8 @@ header {
   color: white;
   margin-bottom: 20px;
   margin-top: 100px;
-  text-shadow: -1px -1px 0 #5c30a8, 1px -1px 0 #5c30a8, -1px 1px 0 #5c30a8,
-    1px 1px 0 #5c30a8;
+  text-shadow: 2px 2px #5c30a8;
+  font-weight: 300;
 }
 
 .botoes-dificuldade {
@@ -158,6 +157,7 @@ header {
   text-align: center;
   margin-top: 20px;
   font-weight: 300;
+  text-shadow: 2px 2px #5c30a8;
 }
 
 #btn-jogar {
@@ -200,7 +200,7 @@ header {
   bottom: 0;
   left: 0;
   z-index: 0; /* atrás dos elementos principais */
-  top: 350px;
+  top: 320px;
   color: #5c30a8;
 }
 
