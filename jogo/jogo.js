@@ -211,16 +211,61 @@ function inserirNumero(valor) {
     const estadoAtual = Array.from(document.querySelectorAll("td")).map(td => td.textContent);
 
     if (valor === "") {
-      // Ao apagar, empilhe o estado atual no refazerStack
       refazerStack.push(estadoAtual);
     } else {
-      // Ao inserir um número, salva no histórico e limpa o refazerStack
       salvarEstado();
       refazerStack = [];
     }
 
     celulaSelecionada.textContent = valor;
+    validarTabuleiro();
   }
+}
+
+function validarTabuleiro() {
+  const tds = document.querySelectorAll("td");
+  tds.forEach(td => td.classList.remove("erro")); // limpa erros anteriores
+
+  const matriz = Array.from({ length: 9 }, (_, i) =>
+    Array.from({ length: 9 }, (_, j) => {
+      const td = document.querySelector(`td[data-row="${i}"][data-col="${j}"]`);
+      return td.textContent;
+    })
+  );
+
+  for (let row = 0; row < 9; row++) {
+    for (let col = 0; col < 9; col++) {
+      const valor = matriz[row][col];
+      if (valor === "") continue;
+
+      // Verifica duplicatas na linha, coluna e bloco 3x3
+      if (temDuplicata(matriz, row, col, valor)) {
+        const td = document.querySelector(`td[data-row="${row}"][data-col="${col}"]`);
+        td.classList.add("erro");
+      }
+    }
+  }
+}
+
+function temDuplicata(matriz, row, col, valor) {
+  // Linha e coluna
+  for (let i = 0; i < 9; i++) {
+    if (i !== col && matriz[row][i] === valor) return true;
+    if (i !== row && matriz[i][col] === valor) return true;
+  }
+
+  // Bloco 3x3
+  const startRow = Math.floor(row / 3) * 3;
+  const startCol = Math.floor(col / 3) * 3;
+  for (let r = 0; r < 3; r++) {
+    for (let c = 0; c < 3; c++) {
+      const rr = startRow + r;
+      const cc = startCol + c;
+      if ((rr !== row || cc !== col) && matriz[rr][cc] === valor) return true;
+    }
+  }
+
+  return false;
 }
 
 function refazerJogada() {
